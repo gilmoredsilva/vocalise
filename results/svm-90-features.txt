@@ -1,0 +1,53 @@
+Vocalise — SVM Experiment 8
+============================
+
+Experiment:
+Added MFCC delta and delta-delta temporal features to the 38-feature baseline.
+
+Dataset:
+CREMA-D
+Total recordings: 7,442
+Actors: 91
+Classes: 6
+
+Evaluation:
+Speaker-independent train/test split
+Test samples: 1,552
+No actor overlap between train and test
+Standardization: Training data only
+
+Features:
+38-feature baseline
++ 13 MFCC delta means
++ 13 MFCC delta standard deviations
++ 13 MFCC delta-delta means
++ 13 MFCC delta-delta standard deviations
+
+Total ML features: 64
+
+Model:
+SVM with RBF kernel
+
+Results:
+Accuracy: 50.90%
+Macro F1: 0.50
+
+Class F1:
+Angry: 0.73
+Disgust: 0.39
+Fear: 0.41
+Happy: 0.47
+Neutral: 0.48
+Sad: 0.53
+
+Comparison:
+Baseline accuracy: 50.19%
+MFCC delta/delta-delta accuracy: 50.90%
+
+Accuracy improvement: +0.71 percentage points
+
+Observation:
+MFCC temporal derivatives produced a modest improvement in accuracy,
+with the largest improvement observed for the angry class. However,
+overall Macro F1 remained approximately unchanged, and performance
+remained below the spectral contrast experiment.

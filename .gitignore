@@ -1,0 +1,11 @@
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Training checkpoints are not needed to run the API and exceed GitHub's file limit.
+models/distilhubert/checkpoint-*/optimizer.pt
+models/distilhubert/checkpoint-*/scheduler.pt
+models/distilhubert/checkpoint-*/scaler.pt
+models/distilhubert/checkpoint-*/rng_state.pth
+models/distilhubert/checkpoint-*/trainer_state.json

@@ -1,0 +1,29 @@
+Model: SVM (RBF)
+Dataset: CREMA-D
+Number of recordings: 7442
+Number of speakers: 91
+Train/Test Split: Speaker-independent
+Test samples: 1552
+
+Features: 38
+
+Feature groups:
+- 13 MFCC means
+- 13 MFCC standard deviations
+- ZCR mean/std
+- RMS energy mean/std
+- Spectral centroid mean/std
+- Spectral bandwidth mean/std
+- Spectral rolloff mean/std
+- Pitch/F0 mean/std
+
+Accuracy: 0.5019
+Macro F1-score: 0.50
+
+Class F1-scores:
+Angry: 0.69
+Disgust: 0.40
+Fear: 0.44
+Happy: 0.43
+Neutral: 0.45
+Sad: 0.57

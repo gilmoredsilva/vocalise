@@ -1,0 +1,48 @@
+Vocalise — SVM Experiment 7
+============================
+
+Experiment:
+Added spectral flatness mean and standard deviation to the 38-feature baseline.
+
+Dataset:
+CREMA-D
+Total recordings: 7,442
+Actors: 91
+Classes: 6
+
+Evaluation:
+Speaker-independent train/test split
+Test samples: 1,552
+No actor overlap between train and test
+Standardization: Training data only
+
+Features:
+38-feature baseline + 2 spectral flatness features
+
+Total ML features: 40
+
+Model:
+SVM with RBF kernel
+
+Results:
+Accuracy: 50.39%
+Macro F1: 0.50
+
+Class F1:
+Angry: 0.70
+Disgust: 0.38
+Fear: 0.46
+Happy: 0.44
+Neutral: 0.46
+Sad: 0.56
+
+Comparison:
+Baseline accuracy: 50.19%
+Spectral flatness accuracy: 50.39%
+
+Accuracy change: +0.20 percentage points
+
+Observation:
+Spectral flatness produced only a negligible improvement and did not
+meaningfully improve Macro F1. It therefore does not appear to provide
+substantial additional discriminative information for this configuration.

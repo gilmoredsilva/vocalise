@@ -1,0 +1,67 @@
+Vocalise — SVM Experiment 4
+============================
+
+Experiment:
+Addition of Chroma features
+
+Dataset:
+CREMA-D
+Total recordings: 7,442
+Actors: 91
+Classes: 6
+
+Evaluation:
+Speaker-independent train/test split
+Test samples: 1,552
+No actor overlap between train and test
+Standardization: Training data only
+
+Features:
+13 MFCC means
+13 MFCC standard deviations
+ZCR mean/std
+RMS energy mean/std
+Spectral centroid mean/std
+Spectral bandwidth mean/std
+Spectral rolloff mean/std
+Pitch/F0 mean/std
+12 Chroma means
+12 Chroma standard deviations
+
+Total ML features: 62
+
+Model:
+SVM with RBF kernel
+
+Results:
+Accuracy: 48.5180%
+Macro F1: 0.48
+
+Class F1:
+Angry:   0.69
+Disgust: 0.35
+Fear:    0.43
+Happy:   0.42
+Neutral: 0.43
+Sad:     0.55
+
+Confusion Matrix:
+[[192, 25,  9, 29,  8,  2],
+ [ 32, 87,  8, 50, 34, 54],
+ [ 24, 15, 97, 41, 22, 66],
+ [ 39, 34, 37,117, 28, 10],
+ [  2, 40, 20, 37, 98, 30],
+ [  2, 30, 20, 14, 37,162]]
+
+Comparison:
+32 features: 48.26% accuracy
+36 features: 48.84% accuracy
+38 features: 50.1933% accuracy
+62 features (+24 Chroma): 48.5180% accuracy
+
+Observation:
+Adding Chroma features decreased accuracy from 50.1933%
+to 48.5180% and reduced Macro F1 from 0.50 to 0.48.
+
+Therefore, Chroma features did not improve speaker-independent
+emotion classification in this experiment.

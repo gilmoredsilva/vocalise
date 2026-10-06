@@ -1,0 +1,58 @@
+Vocalise — SVM Experiment 9
+============================
+
+Experiment:
+Combined spectral contrast and spectral flux with the 38-feature baseline.
+
+Dataset:
+CREMA-D
+Total recordings: 7,442
+Actors: 91
+Classes: 6
+
+Evaluation:
+Speaker-independent train/test split
+Test samples: 1,552
+No actor overlap between train and test
+Standardization: Training data only
+
+Features:
+38-feature baseline
++ 14 spectral contrast features
++ 2 spectral flux features
+
+Total ML features: 54
+
+Model:
+SVM with RBF kernel
+
+Results:
+Accuracy: 52.32%
+Macro F1: 0.52
+
+Class F1:
+Angry: 0.70
+Disgust: 0.39
+Fear: 0.49
+Happy: 0.46
+Neutral: 0.49
+Sad: 0.59
+
+Confusion Matrix:
+[[192, 25,  9, 29,  9,  1],
+ [ 32,100, 14, 48, 22, 49],
+ [ 21, 14,118, 37, 17, 58],
+ [ 36, 33, 33,124, 28, 11],
+ [  3, 42, 20, 26,107, 29],
+ [  3, 32, 19, 10, 30,171]]
+
+Comparison:
+Previous best: 52.06%
+Current: 52.32%
+
+Accuracy improvement: +0.26 percentage points
+
+Observation:
+Combining spectral contrast and spectral flux produced a new best
+accuracy. The result indicates that the two spectral feature families
+provide complementary information for speech emotion classification.

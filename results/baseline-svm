@@ -1,0 +1,18 @@
+Baseline Model: SVM
+Dataset: CREMA-D
+Number of recordings: 7442
+Number of speakers: 91
+Features: 32
+Train/Test Split: Speaker-independent
+Test samples: 1552
+
+Accuracy: 0.4826
+Macro F1-score: 0.48
+
+Class F1-scores:
+Angry: 0.69
+Disgust: 0.37
+Fear: 0.42
+Happy: 0.40
+Neutral: 0.43
+Sad: 0.55

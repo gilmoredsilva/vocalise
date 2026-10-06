@@ -1,0 +1,59 @@
+Vocalise — SVM Experiment 6
+============================
+
+Experiment:
+Added spectral flux mean and standard deviation to the 38-feature baseline.
+
+Dataset:
+CREMA-D
+Total recordings: 7,442
+Actors: 91
+Classes: 6
+
+Evaluation:
+Speaker-independent train/test split
+Test samples: 1,552
+No actor overlap between train and test
+Standardization: Training data only
+
+Features:
+38-feature baseline + 2 spectral flux features
+- Spectral flux mean
+- Spectral flux standard deviation
+
+Total ML features: 40
+
+Model:
+SVM with RBF kernel
+
+Results:
+Accuracy: 51.68%
+Macro F1: 0.51
+
+Class F1:
+Angry: 0.70
+Disgust: 0.39
+Fear: 0.47
+Happy: 0.45
+Neutral: 0.50
+Sad: 0.58
+
+Confusion Matrix:
+[[190, 26,  9, 32,  6,  2],
+ [ 29,100, 22, 45, 25, 44],
+ [ 22, 16,113, 38, 20, 56],
+ [ 35, 32, 39,125, 24, 10],
+ [  1, 40, 18, 31,111, 26],
+ [  2, 31, 20, 17, 32,163]]
+
+Comparison:
+Baseline accuracy: 50.19%
+Spectral flux accuracy: 51.68%
+
+Accuracy improvement: +1.49 percentage points
+
+Observation:
+Adding spectral flux produced a modest improvement over the 38-feature
+baseline. This suggests that temporal spectral variation contains useful
+information for emotion classification, although its contribution is
+smaller than that of spectral contrast.
